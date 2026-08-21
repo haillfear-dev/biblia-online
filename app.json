@@ -1,0 +1,1 @@
+{"expo":{"name":"Bíblia Online","slug":"biblia-online","version":"1.0.0","orientation":"portrait","userInterfaceStyle":"light","scheme":"bibliaonline","plugins":["expo-router"],"experiments":{"typedRoutes":true},"ios":{"supportsTablet":true},"android":{"adaptiveIcon":{"backgroundColor":"#FFFFFF"}}}}
