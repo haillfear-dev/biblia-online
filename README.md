@@ -17,3 +17,9 @@ Depois, abra no Expo Go ou escolha um simulador iOS/Android no terminal do Expo.
 npm run typecheck
 npm run lint
 ```
+
+## Leitor bíblico (Etapa 02)
+
+O núcleo do leitor usa conteúdo original e estritamente demonstrativo. As telas acessam os dados por meio de `BibleRepository`, permitindo trocar a fonte temporária por SQLite ou outra fonte offline sem reconstruir a interface.
+
+Os dados pessoais de leitura (favoritos, grifos, anotações, progresso e histórico) são persistidos separadamente pelo `UserBibleStorage`, sobre AsyncStorage. O conteúdo bíblico não é salvo no AsyncStorage.
