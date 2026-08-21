@@ -6,6 +6,9 @@
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "scheme": "bibliaonline",
+    "assetBundlePatterns": [
+      "assets/**/*"
+    ],
     "plugins": [
       "expo-router",
       "expo-sqlite"
