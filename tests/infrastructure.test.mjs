@@ -1,0 +1,4 @@
+import test from 'node:test'; import assert from 'node:assert/strict'; import fs from 'node:fs';
+test('canonical metadata has 66 books and 1189 chapters',()=>{const source=fs.readFileSync('data/bookMetadata.ts','utf8');assert.equal((source.match(/\['[1-3A-Z]{3}'/g)??[]).length,66);const counts=[...source.matchAll(/,([0-9]+)\]/g)].map(match=>Number(match[1]));assert.equal(counts.reduce((a,b)=>a+b,0),1189);});
+test('schema includes deterministic keys, indexes and FTS5',()=>{const schema=fs.readFileSync('data/sqlite/schema.sql','utf8');assert.match(schema,/bible_versions/);assert.match(schema,/idx_verses_location/);assert.match(schema,/fts5/);});
+test('reference parser normalizes accents and separators',()=>{const source=fs.readFileSync('search/referenceParser.ts','utf8');assert.match(source,/normalize\('NFD'\)/);assert.match(source,/replace\(\/\[\.:,\]\+\/g/);});

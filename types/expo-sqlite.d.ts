@@ -1,0 +1,1 @@
+declare module 'expo-sqlite' { export interface SQLiteDatabase { execSync(sql:string):void; runSync(sql:string,...params:(string|number)[]):unknown; getFirstSync<T>(sql:string,...params:(string|number)[]):T|null; getAllSync<T>(sql:string,...params:(string|number)[]):T[] } export function openDatabaseSync(name:string):SQLiteDatabase; }

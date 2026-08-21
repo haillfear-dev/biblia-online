@@ -1,5 +1,5 @@
 export type Testament = 'old' | 'new';
-export interface BibleVersion { id: string; name: string; abbreviation: string; language: string }
+export interface BibleVersion { id: string; name: string; abbreviation: string; language: string; year?: number; license?: string }
 export interface BibleBook { id: string; versionId: string; testament: Testament; order: number; name: string; abbreviation: string; chapterCount: number }
 export interface BibleVerse { id: string; versionId: string; bookId: string; chapter: number; verse: number; text: string }
 export type HighlightColor = 'yellow' | 'green' | 'blue' | 'pink';
