@@ -1,4 +1,12 @@
-# Formato de importação
-Coloque **somente após verificar a proveniência** o arquivo `almeida-1911-original.json` nesta pasta. O objeto raiz deve conter `translation: "João Ferreira de Almeida 1911"`, `license: "Public Domain"` e `books` (66 itens). Cada livro contém `id` OSIS, `name`, `abbreviation`, `testament` (`old`/`new`) e `chapters`; cada capítulo contém `verses`, uma lista ordenada de strings. Execute `npm run import:bible`.
+# Importação da Almeida 1911
 
-O importador recusa contagens diferentes de 66 livros, 1.189 capítulos ou fora da faixa de 30–32 mil versículos. O arquivo não está incluído porque o acesso à fonte foi bloqueado por HTTP 403; nenhum texto foi fabricado.
+O único arquivo aceito é `data/import/almeida-1911-original.json`, obtido sem
+alterações da pasta `original` do repositório **BibliaJFAAL/JFAAL**. A aplicação
+atribui a esse artefato controlado a tradução **João Ferreira de Almeida 1911** e
+a licença **Public Domain**; esses metadados não precisam existir dentro do JSON.
+
+Execute `npm run import:bible`. O importador entende listas e objetos indexados
+numericamente, além das chaves em português `capitulos`, `versiculos` e `texto`.
+Ele recusa contagens diferentes de 66 livros, 1.189 capítulos ou fora da faixa
+de 30–32 mil versículos, capítulos não canônicos, textos vazios e IDs duplicados.
+O conteúdo dos versículos é persistido literalmente, sem modernização.
