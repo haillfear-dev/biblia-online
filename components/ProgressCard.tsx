@@ -1,4 +1,0 @@
-import { StyleSheet, Text, View } from 'react-native';
-import { colors, radius, spacing, typography } from '@/theme/tokens';
-export function ProgressCard() { return <View style={styles.card}><View style={styles.row}><Text style={styles.level}>Nível 1</Text><Text style={styles.xp}>0 / 100 XP</Text></View><View style={styles.track}><View style={styles.fill} /></View></View>; }
-const styles = StyleSheet.create({ card: { backgroundColor: colors.black, borderRadius: radius.md, padding: spacing.lg }, row: { flexDirection: 'row', justifyContent: 'space-between' }, level: { ...typography.heading, color: colors.white }, xp: { ...typography.caption, color: colors.gold }, track: { height: 6, borderRadius: radius.pill, backgroundColor: '#383838', marginTop: spacing.lg }, fill: { width: '2%', height: '100%', borderRadius: radius.pill, backgroundColor: colors.gold } });
